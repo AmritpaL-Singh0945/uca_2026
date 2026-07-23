@@ -57,3 +57,25 @@ int* countSmaller(int* nums, int numsSize, int* returnSize) {
     free(indices);
     return count;
 }
+
+int main() {
+    int nums[] = {5, 2, 6, 1};
+    int numsSize = sizeof(nums) / sizeof(nums[0]);
+
+    int returnSize;
+
+    int* result = countSmaller(nums, numsSize, &returnSize);
+
+    printf("Input: ");
+    for (int i = 0; i < numsSize; i++) {
+        printf("%d ", nums[i]);
+    }
+
+    printf("\nOutput: ");
+    for (int i = 0; i < returnSize; i++) {
+        printf("%d ", result[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
