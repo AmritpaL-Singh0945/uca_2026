@@ -54,3 +54,9 @@ function* calculator(initialValue) {
         }
     }
 }
+
+const calc = calculator(50);
+
+console.log(calc.next().value);
+console.log(calc.next({operation: "add", value: 30}).value);
+console.log(calc.next({operation: "multiply", value: "2"}).value);
